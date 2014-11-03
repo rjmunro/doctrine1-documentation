@@ -327,7 +327,6 @@ access a related component that isn't already loaded Doctrine uses one
 ``SQL SELECT`` statement for the fetching, hence the following example
 executes three ``SQL SELECTs``.
 
-dakmdaklsd alksdlkamsd kldlksmdklm
 
 ::
 
