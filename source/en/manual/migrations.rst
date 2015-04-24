@@ -67,10 +67,10 @@ If you want to get the current version of the database you can use the
     **Transactions in Migrations** Internally Doctrine does not
     wrap migration versions in transactions. It is up to you as the
     developer to handle exceptions and transactions in your migration
-    classes. Remember though, that very few databases support
-    transactional DDL. So on most databases, even if you wrap the
-    migrations in a transaction, any DDL statements like create, alter,
-    drop, rename, etc., will take effect anyway.
+    classes. Note that a few databases (e.g. MySQL and variants) do not
+    support transactional DDL. Even if you wrap the migrations in a
+    transaction, any DDL statements like create, alter, drop, rename,
+    etc., will take effect anyway.
 
 =========
 Implement
@@ -435,7 +435,7 @@ Irreversible Migration
 
 ::
 
-    // ...
+    // ...m
     public function down()
     {
         throw new Doctrine_Migration_IrreversibleMigrationException( 'The remove column operation cannot be undone!' );
